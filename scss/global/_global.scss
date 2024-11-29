@@ -1,0 +1,43 @@
+@import 'button';
+@import 'text';
+@import 'burger';
+@import 'form';
+
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+.body {
+  font-family: Gilroy;
+  background-color: var(--dark-blue-color);
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.container {
+  max-width: 1530px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+
+.logo {
+  & img {
+    width: 130px;
+  }
+}
+
+.overalay {
+  
+}
+
+button {
+  cursor: pointer;
+}

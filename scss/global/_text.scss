@@ -1,0 +1,20 @@
+.text {
+  &-link {
+    white-space: nowrap;
+    color: var(--white-color);
+    font-weight: 400;
+    transition: all var(--transition);
+       
+    &:hover {
+      color: var(--light-blue-color);
+    }
+
+    & svg path {
+      transition: all var(--transition);
+    }
+
+    &:hover svg path {
+      stroke: var(--light-blue-color);
+    }
+  }
+}

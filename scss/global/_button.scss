@@ -1,0 +1,19 @@
+.button {
+  &-primary {
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color: var(--accent-blue-color);
+    transition: all var(--transition);
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+}
