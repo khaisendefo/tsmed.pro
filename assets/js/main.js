@@ -44,3 +44,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+document.querySelectorAll('.equipment__card').forEach((card) => {
+  const buttons = card.querySelectorAll('.equipment__card-tab-nav-button');
+  const contents = card.querySelectorAll('[data-content]');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      // Убираем активность у всех кнопок и контента
+      buttons.forEach((btn) => btn.classList.remove('active'));
+      contents.forEach((content) => content.classList.remove('active'));
+
+      // Активируем текущую кнопку и контент
+      button.classList.add('active');
+      const tab = button.dataset.tab;
+      card.querySelector(`[data-content="${tab}"]`).classList.add('active');
+    });
+  });
+});
+

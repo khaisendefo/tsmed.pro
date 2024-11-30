@@ -1,0 +1,115 @@
+.equipment {
+  padding: 70px 0;
+  background-color: var(--white-color);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__card {
+    display: inline-block;
+    padding: 15px;
+    box-shadow: 0px 3px 15px rgba(51, 62, 70, 0.179);
+    border-radius: 15px;
+    height: 709px;
+
+    &-image {
+      margin-bottom: 15px;
+      max-width: 100%;
+
+      & img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    &-tab {
+      margin-bottom: 15px;
+
+      &-nav {
+        display: flex;
+        gap: 10px;
+
+        &-button {
+          @include flex-align-center;
+          gap: 10px;
+          padding: 10px 25px;
+          border-radius: 10px;
+          color: var(--dark-color);
+          background-color: var(--light-white-color);
+          cursor: pointer;
+
+          & svg path {
+            stroke: var(--dark-color);
+          }
+
+          &.active {
+            color: var(--white-color);
+            background-color: var(--accent-blue-color);
+
+            & svg path {
+              stroke: var(--white-color);
+            }
+          }
+        }
+      }
+    }
+
+    &-general {
+      color: var(--dark-color);
+      display: none;
+
+      &-name {
+        margin-bottom: 20px;
+      }
+
+      &-application {
+        margin-bottom: 20px;
+      }
+
+      &-label {
+        margin-bottom: 10px;
+      }
+
+      &-item {
+        color: var(--white-color);
+        display: inline-block;
+        padding: 5px 8px;
+        background-color: var(--accent-blue-color);
+        border-radius: 20px;
+      }
+
+      &-description {
+        margin-bottom: 40px;
+      }
+
+      &-button {
+        padding: 15px 30px;
+      }
+    }
+
+    &-characteristics {
+      display: none;
+      &-list {
+        @include flex-column;
+        gap: 7px;
+      }
+
+      &-item {
+        font-size: 0.9em;
+      }
+    }
+
+    &-characteristics.active, &-general.active {
+      display: block;
+    }
+  }
+}

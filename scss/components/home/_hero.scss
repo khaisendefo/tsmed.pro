@@ -1,0 +1,62 @@
+.hero {
+  padding: 80px 0 100px;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+  }
+
+
+  &__information {
+    &-title {
+      margin-bottom: 30px;
+    }
+
+    &-description {
+      margin-bottom: 40px;
+      max-width: 1100px;
+    }
+
+    &-button {
+      @include flex-all-center;
+      gap: 10px;   
+      width: 290px;
+      padding: 20px 0;
+      font-weight: 600;
+      margin-bottom: 40px;
+      border-radius: 30px;
+      &-icon {     
+        & svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        & svg path {
+          stroke: var(--white-color);
+        }
+      }
+    }
+
+    &-list {
+      display: inline-flex;
+      gap: 15px;
+
+      &-item {
+        padding: 10px 15px;
+        border: 1px solid var(--white-color);
+        border-radius: 20px;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -200px;
+    bottom: -180px;
+    opacity: 0.9;
+
+    & img {
+      width: 600px;
+    }
+  }
+}
