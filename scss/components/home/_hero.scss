@@ -1,6 +1,21 @@
 .hero {
   padding: 80px 0 100px;
   overflow: hidden;
+  position: relative;
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &-two {
+      position: absolute;
+      right: 0;
+      bottom: -200px;
+      z-index: -1;
+    }
+  }
 
   &__container {
     position: relative;
@@ -14,7 +29,7 @@
 
     &-description {
       margin-bottom: 40px;
-      max-width: 1100px;
+      max-width: 1000px;
     }
 
     &-button {

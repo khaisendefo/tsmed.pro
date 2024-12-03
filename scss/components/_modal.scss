@@ -9,7 +9,7 @@
     display: block;
   }
 
-  &, &__overlay, &__inner {
+  &, &__overlay {
     width: 100%;
     height: 100%;
   }
@@ -21,6 +21,8 @@
   &__inner {
     @include flex-all-center;
     position: relative;
+    width: 100%;
+    height: 100%;
   }
 
   &__close {
@@ -100,7 +102,7 @@
       line-height: 1.3;
 
       & a {
-        color: var(--primary-color);
+        color: var(--accent-blue-color);
       }
     } 
   }

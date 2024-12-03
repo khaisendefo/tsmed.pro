@@ -17,9 +17,8 @@
   &__card {
     display: inline-block;
     padding: 15px;
-    box-shadow: 0px 3px 15px rgba(51, 62, 70, 0.179);
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .2);
     border-radius: 15px;
-    height: 709px;
 
     &-image {
       margin-bottom: 15px;
@@ -46,6 +45,7 @@
           color: var(--dark-color);
           background-color: var(--light-white-color);
           cursor: pointer;
+          transition: all var(--transition);
 
           & svg path {
             stroke: var(--dark-color);
@@ -66,6 +66,7 @@
     &-general {
       color: var(--dark-color);
       display: none;
+      transition: all var(--transition);
 
       &-name {
         margin-bottom: 20px;
@@ -98,18 +99,32 @@
 
     &-characteristics {
       display: none;
+      transition: all var(--transition);
       &-list {
         @include flex-column;
         gap: 7px;
       }
 
       &-item {
+        @include flex-align-center;
+        gap: 5px;
         font-size: 0.9em;
+
+        &::before {
+          content: '';
+          min-width: 6px;
+          min-height: 6px;
+          background-color: var(--dark-color);
+          display: inline-block;
+          border-radius: 50%;
+          opacity: 0.8;
+        }
       }
     }
 
     &-characteristics.active, &-general.active {
       display: block;
+      transition: all var(--transition);
     }
   }
 }

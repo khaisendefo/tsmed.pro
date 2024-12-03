@@ -4,11 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="assets/libs/splide.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body class="body">
   <div class="wrapper">
     <header class="header">
+      <div class="hero__decor">
+        <svg width="1232" height="1000" viewBox="0 0 1232 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="1" filter="url(#filter0_f_58_15)">
+          <path d="M256 580C518.888 580 732 404.048 732 187C732 -30.0479 518.888 -206 256 -206C-6.88754 -206 -220 -30.0479 -220 187C-220 404.048 -6.88754 580 256 580Z" fill="#4989ff" fill-opacity="0.2"/>
+          </g>
+          <defs>
+          <filter id="filter0_f_58_15" x="-720" y="-706" width="1952" height="1786" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_58_15"/>
+          </filter>
+          </defs>
+        </svg>                       
+      </div>
        <div class="header__fixed">
         <div class="header__container container">
           <a class="header__logo logo" href="#" title="Логотип ТСМЕД">
@@ -36,9 +51,6 @@
                   <a class="header__nav-link text-link" title="Почему мы?" href="#">Преимущества</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link text-link" title="Напишите нам" href="#">Напишите нам</a>
-                </li>
-                <li class="header__nav-item">
                   <a class="header__nav-link text-link" title="Контакты" href="#">Контакты</a>
                 </li>
               </ul>
@@ -64,20 +76,34 @@
                 </a>
               </li>              
             </ul>
-            <button class="header__button button-primary">Оставить заявку</button>
+            <button class="header__button button-primary modal-open">Оставить заявку</button>
           </div>
         </div>
        </div>
     </header>
     <main class="main">
       <section class="hero" id="hero">
+        <div class="hero__decor-two">
+          <svg width="1174" height="983" viewBox="0 0 1174 983" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="1" filter="url(#filter0_f_25_334)">
+            <path d="M976 1286C1238.89 1286 1452 1110.05 1452 893C1452 675.952 1238.89 500 976 500C713.112 500 500 675.952 500 893C500 1110.05 713.112 1286 976 1286Z" fill="#4989ff" fill-opacity="0.2"/>
+            </g>
+            <defs>
+            <filter id="filter0_f_25_334" x="0" y="0" width="1952" height="1786" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_25_334"/>
+            </filter>
+            </defs>
+          </svg>                                  
+        </div>
         <div class="hero__inner">
           <div class="hero__container container">
             <div class="hero__content">
               <div class="hero__information">
-                <h1 class="hero__information-title heading-title">Надежные поставки медицинского оборудования и расходных материалов</h1>
-                <p class="hero__information-description text-description">Надежный поставщик медицинского оборудования и материалов, используемых в малоинвазивной терапии, лазерной хирургии и фотодинамической терапии, обеспечивающий высокое качество и репутацию мировых брендов.</p>
-                <button class="hero__information-button button-primary">
+                <h1 class="hero__information-title heading-title">НАДЁЖНЫЙ ПОСТАВЩИК <br> МЕДОБОРУДОВАНИЯ <br> И РАСХОДНЫХ МАТЕРИАЛОВ</h1>
+                <p class="hero__information-description text-description">На сегодняшний день Tsmed является международной компанией с офисами во многих странах мира. Вся продукция компании производится в Европе под самым жестким контролем за соблюдением мировых стандартов производства, и является эталоном качества и надежности.</p>
+                <button class="hero__information-button button-primary modal-open">
                   Оставить заявку
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M14.4301 5.92999L20.5001 12L14.4301 18.07" stroke="#DFDFEC" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -139,7 +165,7 @@
                       <h5 class="equipment__card-general-label text-label">Описание:</h5>
                       <p class="equipment__card-general-text text-description-small">Мощность 200 Вт достаточна для процедур в этой области. Другие урологические направления, такие как минимально инвазивная лазерная терапия опухолей мочевого пузыря, кондилом и стриктур, могут проводиться с меньшей мощностью.</p>
                     </div>
-                    <button class="equipment__card-general-button button-primary">Оставить заявку</button>
+                    <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                   </div>
                   <div class="equipment__card-characteristics" data-content="characteristics">
                     <ul class="equipment__card-characteristics-list">
@@ -180,31 +206,32 @@
                     </nav>
                   </div>
                   <div class="equipment__card-general active" data-content="general">
-                    <h3 class="equipment__card-general-name heading-name">LEONARDO® Dual 200</h3>
+                    <h3 class="equipment__card-general-name heading-name">LEONARDO® Mini Dual</h3>
                     <div class="equipment__card-general-application">
                       <h4 class="equipment__card-general-label text-label">Области применения:</h4>
                       <ul class="equipment__card-general-list">
-                        <li class="equipment__card-general-item">Урология</li>
+                        <li class="equipment__card-general-item">Проктология</li>
+                        <li class="equipment__card-general-item">Флебология</li>
                       </ul> 
                     </div>
                     <div class="equipment__card-general-description">
                       <h5 class="equipment__card-general-label text-label">Описание:</h5>
-                      <p class="equipment__card-general-text text-description-small">Мощность 200 Вт достаточна для процедур в этой области. Другие урологические направления, такие как минимально инвазивная лазерная терапия опухолей мочевого пузыря, кондилом и стриктур, могут проводиться с меньшей мощностью.</p>
+                      <p class="equipment__card-general-text text-description-small">Лазер biolitec® LEONARDO® Mini идеально сочетается с широким спектром специальных медицинских волокон и наборов для их применения, разработанных компанией. Biolitec® является одним из самых технологически продвинутых в мире поставщиков оптоволоконной продукции.</p>
                     </div>
-                    <button class="equipment__card-general-button button-primary">Оставить заявку</button>
+                    <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                   </div>
                   <div class="equipment__card-characteristics" data-content="characteristics">
                     <ul class="equipment__card-characteristics-list">
-                      <li class="equipment__card-characteristics-item text-description-small">Модель: LEONARDO® DUAL 200  SL980+1470нм200Вт</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Длина волны: 980 нм и 1470 нм</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Мощность: макс 200 Вт (1470 нм/40 Вт + 980 нм/160 Вт) регулируется отдельно</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Модель: LEONARDO® Mini Dual SL980+1470нм16Вт</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Мощность: 11 Вт (980 нм) / 5 Вт (1470 нм)</li>
                       <li class="equipment__card-characteristics-item text-description-small">Диаметр волокна: 360 мкм</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Направляющий луч: 532 нм и 635 нм, зеленый 1 мВт, красный 4 мВт, интенсивность регулируется пользователем</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Режим лечения: CW, импульсный режим, сигнал ELVeS®, сегмент ELVeS®, режим дермы</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Длительность импульса/пауза 0,01‒60 с /0,01‒60 с</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Электропитание: 110 – 240 В переменного тока, 50/60 Гц, 850 ВА</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Размеры (В×Ш×Г): прибл. 20 см × 37 см × 26 см</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Вес: 15 кг</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Прицельный луч: 635 нм, макс. 4 мВт</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Режим лечения: CW, импульсный режим (опционально)</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Длительность импульса/пауза 0,01 – 180 с /0,01 – 180 с</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Электропитание: 110–240 В переменного тока, 50–60 Гц (12 В постоянного тока при 100 Вт)</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Аккумуляторы: Литий-ионные аккумуляторы</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Размеры (В×Ш×Г): 6 см×9 см×21,5 см</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Вес: около 900</li>
                     </ul>
                   </div>
                 </article>
@@ -232,31 +259,32 @@
                     </nav>
                   </div>
                   <div class="equipment__card-general active" data-content="general">
-                    <h3 class="equipment__card-general-name heading-name">LEONARDO® Dual 200</h3>
+                    <h3 class="equipment__card-general-name heading-name">LEONARDO® DUAL 100</h3>
                     <div class="equipment__card-general-application">
                       <h4 class="equipment__card-general-label text-label">Области применения:</h4>
                       <ul class="equipment__card-general-list">
-                        <li class="equipment__card-general-item">Урология</li>
+                        <li class="equipment__card-general-item">Флебология</li>
+                        <li class="equipment__card-general-item">Гинекология</li>
                       </ul> 
                     </div>
                     <div class="equipment__card-general-description">
                       <h5 class="equipment__card-general-label text-label">Описание:</h5>
-                      <p class="equipment__card-general-text text-description-small">Мощность 200 Вт достаточна для процедур в этой области. Другие урологические направления, такие как минимально инвазивная лазерная терапия опухолей мочевого пузыря, кондилом и стриктур, могут проводиться с меньшей мощностью.</p>
+                      <p class="equipment__card-general-text text-description-small">Лазер LEONARDO® DUAL 100 - самый универсальный медицинский лазер в мире. Этот сверхкомпактный диодный лазер сочетает в себе две длины волны, 980 нм и 1470 нм для различных тканей взаимодействия. Каждая длина волны может быть индивидуально отобранные или смешанные вместе, чтобы предложить идеальныt желаемые тканевые эффекты, такие как разрез, иссечение, вапоризация, гемостаз и коагуляция мягких ткани с контактной или бесконтактной доставкой вариантов открытых и эндоскопических операций. </p>
                     </div>
-                    <button class="equipment__card-general-button button-primary">Оставить заявку</button>
+                    <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                   </div>
                   <div class="equipment__card-characteristics" data-content="characteristics">
                     <ul class="equipment__card-characteristics-list">
-                      <li class="equipment__card-characteristics-item text-description-small">Модель: LEONARDO® DUAL 200  SL980+1470нм200Вт</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Модель: LEONARDO® DUAL 100 SL980+1470нм100Вт</li>
                       <li class="equipment__card-characteristics-item text-description-small">Длина волны: 980 нм и 1470 нм</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Мощность: макс 200 Вт (1470 нм/40 Вт + 980 нм/160 Вт) регулируется отдельно</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Мощность: макс. 100 Вт (1470 нм/15 Вт + 980 нм/85 Вт) регулируется отдельно</li>
                       <li class="equipment__card-characteristics-item text-description-small">Диаметр волокна: 360 мкм</li>
                       <li class="equipment__card-characteristics-item text-description-small">Направляющий луч: 532 нм и 635 нм, зеленый 1 мВт, красный 4 мВт, интенсивность регулируется пользователем</li>
                       <li class="equipment__card-characteristics-item text-description-small">Режим лечения: CW, импульсный режим, сигнал ELVeS®, сегмент ELVeS®, режим дермы</li>
                       <li class="equipment__card-characteristics-item text-description-small">Длительность импульса/пауза 0,01‒60 с /0,01‒60 с</li>
                       <li class="equipment__card-characteristics-item text-description-small">Электропитание: 110 – 240 В переменного тока, 50/60 Гц, 850 ВА</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Размеры (В×Ш×Г): прибл. 20 см × 37 см × 26 см</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Вес: 15 кг</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Размеры (В×Ш×Г): прибл. 28 см × 37 см × 9 см</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Вес: 8,5кг</li>
                     </ul>
                   </div>
                 </article>
@@ -284,31 +312,33 @@
                     </nav>
                   </div>
                   <div class="equipment__card-general active" data-content="general">
-                    <h3 class="equipment__card-general-name heading-name">LEONARDO® Dual 200</h3>
+                    <h3 class="equipment__card-general-name heading-name">CERALAS E15 ELVES</h3>
                     <div class="equipment__card-general-application">
                       <h4 class="equipment__card-general-label text-label">Области применения:</h4>
                       <ul class="equipment__card-general-list">
-                        <li class="equipment__card-general-item">Урология</li>
+                        <li class="equipment__card-general-item">Флебология</li>
+                        <li class="equipment__card-general-item">Проктология</li>
+                        <li class="equipment__card-general-item">Лор</li>
                       </ul> 
                     </div>
                     <div class="equipment__card-general-description">
                       <h5 class="equipment__card-general-label text-label">Описание:</h5>
-                      <p class="equipment__card-general-text text-description-small">Мощность 200 Вт достаточна для процедур в этой области. Другие урологические направления, такие как минимально инвазивная лазерная терапия опухолей мочевого пузыря, кондилом и стриктур, могут проводиться с меньшей мощностью.</p>
+                      <p class="equipment__card-general-text text-description-small">Ceralas Е15ELVES – лазерная система, специально разработанная компанией biolitec для широкого спектра применений. Лазерный аппарат Ceralasтм Е предназначен для обработки мягких тканей и бесконтактных хирургических процедур, включая эндоскопические процедуры и успешно применяется в таких направления, как флебология и проктология.</p>
                     </div>
-                    <button class="equipment__card-general-button button-primary">Оставить заявку</button>
+                    <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                   </div>
                   <div class="equipment__card-characteristics" data-content="characteristics">
                     <ul class="equipment__card-characteristics-list">
-                      <li class="equipment__card-characteristics-item text-description-small">Модель: LEONARDO® DUAL 200  SL980+1470нм200Вт</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Длина волны: 980 нм и 1470 нм</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Мощность: макс 200 Вт (1470 нм/40 Вт + 980 нм/160 Вт) регулируется отдельно</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Диаметр волокна: 360 мкм</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Направляющий луч: 532 нм и 635 нм, зеленый 1 мВт, красный 4 мВт, интенсивность регулируется пользователем</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Режим лечения: CW, импульсный режим, сигнал ELVeS®, сегмент ELVeS®, режим дермы</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Длительность импульса/пауза 0,01‒60 с /0,01‒60 с</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Электропитание: 110 – 240 В переменного тока, 50/60 Гц, 850 ВА</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Размеры (В×Ш×Г): прибл. 20 см × 37 см × 26 см</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Вес: 15 кг</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Модель: CeralasтмЕ 15 Вт/1470 нм</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Длина волны: 1470±30 нм</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Мощность: 15 Вт</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Диаметр световодов: 600 мкм</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Пилотный луч: 635±10 нм; 4 мВт (макс.)</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Режим лечения: Непрерывный /импульсный режим</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Длительность лечения От 0.01 до 99.9 сек. / непрерывный режим</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Электропитание: 100-240 VAC (напряжение переменного тока); 50-60 Гц</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Размеры (В×Ш×Г): 220 мм х 260мм х 380 мм</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Вес: 7.5 кг</li>
                     </ul>
                   </div>
                 </article>
@@ -336,31 +366,26 @@
                     </nav>
                   </div>
                   <div class="equipment__card-general active" data-content="general">
-                    <h3 class="equipment__card-general-name heading-name">LEONARDO® Dual 200</h3>
+                    <h3 class="equipment__card-general-name heading-name">ELVeS ® smart Pullback device</h3>
                     <div class="equipment__card-general-application">
                       <h4 class="equipment__card-general-label text-label">Области применения:</h4>
                       <ul class="equipment__card-general-list">
-                        <li class="equipment__card-general-item">Урология</li>
+                        <li class="equipment__card-general-item">Флебология</li>
                       </ul> 
                     </div>
                     <div class="equipment__card-general-description">
                       <h5 class="equipment__card-general-label text-label">Описание:</h5>
-                      <p class="equipment__card-general-text text-description-small">Мощность 200 Вт достаточна для процедур в этой области. Другие урологические направления, такие как минимально инвазивная лазерная терапия опухолей мочевого пузыря, кондилом и стриктур, могут проводиться с меньшей мощностью.</p>
+                      <p class="equipment__card-general-text text-description-small">ELVeS® smart Pullback device протягиватель для световодов, это отличное дополнение к световодам ELVeS® Radial и диодному лазерному устройству biolitec® с сигнальным режимом ELVeS® Непрерывный и равномерный вывод световодов ELVeS® Radial во время процедуры эндовенозной лазерной абляции варикозных вен.</p>
                     </div>
-                    <button class="equipment__card-general-button button-primary">Оставить заявку</button>
+                    <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                   </div>
                   <div class="equipment__card-characteristics" data-content="characteristics">
                     <ul class="equipment__card-characteristics-list">
-                      <li class="equipment__card-characteristics-item text-description-small">Модель: LEONARDO® DUAL 200  SL980+1470нм200Вт</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Длина волны: 980 нм и 1470 нм</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Мощность: макс 200 Вт (1470 нм/40 Вт + 980 нм/160 Вт) регулируется отдельно</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Диаметр волокна: 360 мкм</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Направляющий луч: 532 нм и 635 нм, зеленый 1 мВт, красный 4 мВт, интенсивность регулируется пользователем</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Режим лечения: CW, импульсный режим, сигнал ELVeS®, сегмент ELVeS®, режим дермы</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Длительность импульса/пауза 0,01‒60 с /0,01‒60 с</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Электропитание: 110 – 240 В переменного тока, 50/60 Гц, 850 ВА</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Размеры (В×Ш×Г): прибл. 20 см × 37 см × 26 см</li>
-                      <li class="equipment__card-characteristics-item text-description-small">Вес: 15 кг</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Сер. № L-ELVesSmart-Set </li>
+                      <li class="equipment__card-characteristics-item text-description-small">Скорость вытягивания 0.5 ; 1.0 ; 1.5 ; 2.0 мм/сек </li>
+                      <li class="equipment__card-characteristics-item text-description-small">Световоды ELVeS Radial®, ELVeS Radial 2ring® ELVeS Radial® slim, ELVeS Radial® 2ring slim</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Источник питания 100 – 240 VAC, 50 – 60 Гц</li>
+                      <li class="equipment__card-characteristics-item text-description-small">Габариты (В × Ш × Г) 12 см × 16,5 см × 22 см Вес 2,4 кг</li>
                     </ul>
                   </div>
                 </article>
@@ -369,8 +394,295 @@
           </div>
         </div>
       </section>
+      <section class="consumables" id="consumables">
+        <div class="consumables__inner">
+          <div class="consumables__container container">
+            <div class="consumables__content">
+              <h2 class="consumables__title heading-section-title">Расходники Медицинского оборудования</h2>
+              <div class="consumables__slider splide">
+                <div class="consumables__slider-track splide__track">
+                  <div class="consumables__slider-list splide__list">
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/1.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Swift</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501100140</h4>
+                        <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником ELVeS Radial swift идеально подходит для малых подкожных вен, за счет тонкого волокна. Идеально подходит как для опытных врачей, так и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/2.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Swift</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501100250</h4>
+                        <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником FiLaC Fistula Probe предназначен чтобы аккуратно удалить свищевой ход, не повреждая сфинктер. Кроме того, FiLaC процедура предлагает минимально инвазивный подход, который может быть выполняется всего за несколько минут, так как действие лазера заменяет иссечение.</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/3.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">HeLP LHP-Fiber</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501100200</h4>
+                        <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником LHP-Fiber используется для лечения запущенного геморроя. Энергия лазера вводится центрально в геморроидальный узел. По этой методике геморрой можно лечить в зависимости от его размера, не вызывая любое повреждение анодермы или слизистой оболочки.</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/4.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Slim Fiber</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501100150</h4>
+                        <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником ELVeS Radial Slim идельно подходит для малых подкожных вен, за счет тонкого волокна.Идеально подходит как для опытных врачей, так и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/5.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial 2ring Fiber</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501100170</h4>
+                        <p class="consumables__slider-card-description text-description-small">Двухфазное излучение ELVeS® Radial® 2ring — лучший выбор для отличного результата не только для опытных врачей, но и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/6.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Fiber</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501100100</h4>
+                        <p class="consumables__slider-card-description text-description-small">Гибкий однокольцевой световод с коннектором и наконечником ELVeS Radial Fiber идельно подходит для решения различный задач, лучший выбор для отличного результата не только для опытных врачей, но и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/7.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">Twister Fiber</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501200200</h4>
+                        <p class="consumables__slider-card-description text-description-small">Наши контактные волокна Twister Fiber разработаны для достижения непревзойденной скорости абляции и отличной надежности. Работа в контактном режиме предлагает прямую и высокую подачу энергии точно на область, где вы хотите провести аблацию или вапоризацию.</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/8.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">Bare Fiber 1000 Flat tip</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501300400</h4>
+                        <p class="consumables__slider-card-description text-description-small">текст...</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/9.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">Bare Fiber 600 Flat tip</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501200740</h4>
+                        <p class="consumables__slider-card-description text-description-small">текст...</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                    <article class="consumables__slider-card splide__slide">
+                      <div class="consumables__slider-card-image">
+                        <img width="150" height="250" src="assets/images/consumables/10.png" alt="">
+                      </div>
+                      <div class="consumables__slider-card-information">
+                        <h3 class="consumables__slider-card-name heading-name">Bare Fiber 400 Flat tip</h3>
+                        <h4 class="consumables__slider-card-article">Арт.501200744</h4>
+                        <p class="consumables__slider-card-description text-description-small">текст...</p>
+                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="advantages__inner">
+          <div class="advantages__container container">
+            <h2 class="advantages__title heading-section-title">Почему, Вам будет выгодно сотрудничать с нами?</h2>
+            <p class="advantages__description text-description">Мы надёжный партнёр и мы более 7 лет на рынке медицинского оборудования, сотрудничая с нами вы получите все вышеописанные преимущества и самое главное доступность расходных материалов для вашего оборудования.</p>
+            <div class="advantages__row">
+              <div class="advantages__card">
+                <div class="advantages__card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 80L0 229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7L48 32C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+                </div>
+                <h3 class="advantages__card-title">Лучшие цены на медицинскую продукцию и расходные материалы</h3>
+              </div>
+              <div class="advantages__card">
+                <div class="advantages__card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+                    <circle cx="9" cy="13" r="1" fill="currentColor"/>
+                    <circle cx="15" cy="13" r="1" fill="currentColor"/>
+                    <path fill="currentColor" d="M18 11.03A6.04 6.04 0 0 0 12.05 6c-3.03 0-6.29 2.51-6.03 6.45a8.075 8.075 0 0 0 4.86-5.89c1.31 2.63 4 4.44 7.12 4.47z"/>
+                    <path fill="currentColor" d="M20.99 12c-.11-5.37-4.31-9-8.99-9c-4.61 0-8.85 3.53-8.99 9H2v6h3v-5.81c0-3.83 2.95-7.18 6.78-7.29a7.007 7.007 0 0 1 7.22 7V19h-8v2h10v-3h1v-6h-1.01z"/>
+                  </svg>
+                </div>
+                <h3 class="advantages__card-title">Быстрая скорость принятия решений на ваши запросы</h3>
+              </div>
+              <div class="advantages__card">
+                <div class="advantages__card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="800px" width="800px" version="1.1" id="Capa_1" viewBox="0 0 26 26" xml:space="preserve">
+                    <g>
+                      <path style="fill:#ffffff;" d="M19,24.968v1H7v-1c0-0.551,0.449-1,1-1h2.013c0.053-1.248,0.863-2.29,1.987-2.689V9.554   c-0.527-0.333-0.88-0.917-0.88-1.587H12h2h0.88c0,0.67-0.353,1.254-0.88,1.587v11.724c1.124,0.399,1.934,1.441,1.987,2.689H18   C18.551,23.968,19,24.417,19,24.968z M26,15.967c-0.733,2.064-2.685,3.553-5,3.553s-4.267-1.49-5-3.553h1.154l3.378-8.953   c0.146-0.39,0.789-0.39,0.936,0l3.378,8.953H26z M23.777,15.967L21,8.608l-2.777,7.36H23.777z M5,5.978   c0.453,0,0.822-0.303,0.95-0.714c0.331-0.126,0.67-0.296,1.018-0.472C7.733,4.406,8.6,3.967,9.5,3.967   c0.864,0,1.404,0.399,1.713,0.739c-0.012,0.086-0.026,0.172-0.026,0.261c0,1.001,0.812,1.813,1.813,1.813s1.813-0.812,1.813-1.813   c0-0.089-0.014-0.174-0.026-0.26c0.308-0.339,0.848-0.74,1.713-0.74c0.9,0,1.767,0.438,2.531,0.824   c0.349,0.176,0.688,0.346,1.019,0.472c0.128,0.411,0.497,0.714,0.95,0.714c0.558,0,1.01-0.452,1.01-1.01s-0.452-1.01-1.01-1.01   c-0.288,0-0.545,0.124-0.729,0.318c-0.247-0.104-0.514-0.237-0.789-0.376c-0.864-0.437-1.843-0.932-2.982-0.932   c-0.996,0-1.69,0.379-2.161,0.787c-0.211-0.233-0.481-0.407-0.788-0.506c0.373-0.2,0.635-0.581,0.635-1.032   C14.186,1.561,13,0.032,13,0.032s-1.186,1.529-1.186,2.184c0,0.452,0.262,0.832,0.635,1.032c-0.307,0.098-0.577,0.273-0.788,0.506   C11.19,3.346,10.496,2.967,9.5,2.967c-1.139,0-2.119,0.495-2.983,0.932C6.242,4.039,5.976,4.172,5.729,4.275   C5.545,4.082,5.288,3.957,5,3.957c-0.558,0-1.01,0.452-1.01,1.01S4.442,5.978,5,5.978z M5,19.521c-2.315,0-4.267-1.49-5-3.553   h1.154l3.378-8.953c0.146-0.39,0.789-0.39,0.936,0l3.378,8.953H10C9.267,18.031,7.315,19.521,5,19.521z M7.777,15.967L5,8.608   l-2.777,7.36H7.777z"/>
+                    </g>
+                    </svg>
+                </div>
+                <h3 class="advantages__card-title">Отсутствие бюрократических препятствий в работе</h3>
+              </div>
+              <div class="advantages__card">
+                <div class="advantages__card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.8613 9.36335L10.7302 9.59849C10.5862 9.85677 10.5142 9.98591 10.402 10.0711C10.2897 10.1563 10.1499 10.188 9.87035 10.2512L9.61581 10.3088C8.63195 10.5314 8.14001 10.6427 8.02297 11.0191C7.90593 11.3955 8.2413 11.7876 8.91204 12.572L9.08557 12.7749C9.27617 12.9978 9.37147 13.1092 9.41435 13.2471C9.45722 13.385 9.44281 13.5336 9.41399 13.831L9.38776 14.1018C9.28635 15.1482 9.23565 15.6715 9.54206 15.9041C9.84847 16.1367 10.3091 15.9246 11.2303 15.5005L11.4686 15.3907C11.7304 15.2702 11.8613 15.2099 12 15.2099C12.1387 15.2099 12.2696 15.2702 12.5314 15.3907L12.7697 15.5005C13.6909 15.9246 14.1515 16.1367 14.4579 15.9041C14.7644 15.6715 14.7136 15.1482 14.6122 14.1018L14.586 13.831C14.5572 13.5336 14.5428 13.385 14.5857 13.2471C14.6285 13.1092 14.7238 12.9978 14.9144 12.7749L15.088 12.572C15.7587 11.7876 16.0941 11.3955 15.977 11.0191C15.86 10.6427 15.3681 10.5314 14.3842 10.3088L14.1296 10.2512C13.8501 10.188 13.7103 10.1563 13.598 10.0711C13.4858 9.98592 13.4138 9.85678 13.2698 9.5985L13.1387 9.36335C12.6321 8.45445 12.3787 8 12 8C11.6213 8 11.3679 8.45446 10.8613 9.36335Z" fill="#1C274C"/>
+                    </svg>
+                </div>
+                <h3 class="advantages__card-title">Наши клиенты, не уходят к конкурентам</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="gallery__container container">
+          <div class="gallery__grid">
+            <div class="gallery__card">
+              <img src="assets/images/gallery/1.JPG" alt="">
+            </div>
+            <div class="gallery__card">
+              <img src="assets/images/gallery/2.jpg" alt="">
+            </div>
+            <div class="gallery__card">
+              <img src="assets/images/gallery/3.jpg" alt="">
+            </div>
+            <div class="gallery__card">
+              <img src="assets/images/gallery/4.jpg" alt="">
+            </div>
+            <div class="gallery__card">
+              <img src="assets/images/gallery/5.jpg" alt="">
+            </div>
+            <div class="gallery__card gallery__card-last">
+              <a class="gallery__card-link" href="tezisyi-samara.pdf" target="_blank">Сертификат</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact__container container">
+          <div class="contact__content">
+            <div class="contact__сonsultation">
+              <h2 class="contact__сonsultation-title heading-section-title">Напишите нам</h2>
+              <form class="contact__сonsultation-form form" action="">
+                <input class="contact__сonsultation-form-input form-input" type="text" placeholder="Ваше имя">
+                <input class="contact__сonsultation-form-input form-input" type="email" placeholder="Ваше email">
+                <textarea class="contact__сonsultation-form-textarea form-textarea" name="Сообщение" id="" placeholder="Сообщение"></textarea>
+                <div class="contact__consultation-form-confirmation form-confirmation">
+                  <input class="contact__consultation-form-confirmation-checkbox form-checkbox" type="checkbox">
+                  <p class="contact__consultation-form-confirmation-description text-description-small">
+                    Я даю согласие на <a href="#">обработку персональных данных</a>
+                  </p>
+                </div>
+                <button class="contact__consultation-form-button button-primary" type="submit">Оставить заявку</button>
+              </form>
+            </div>
+            <div class="contact__wrapper">
+              <div class="contact__card" data-aos="fade-up">
+                <div class="contact__info">
+                  <div class="contact__contact-tel contact-row">
+                    <div class="contact__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                      </svg>
+                    </div>
+                    <a class="contact__contact-link" href="tel:+7 (925) 884-49-87">+7 (925) 884-49-87</a>
+                  </div>
+                  <div class="contact__contact-email contact-row">
+                    <div class="contact__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                      </svg>
+                    </div>
+                    <a class="contact__contact-link" href="mailto:infotsmedmsk@gmail.com">infotsmedmsk@gmail.com</a>
+                  </div>
+                  <div class="contact__address">
+                    <div class="contact__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                      </svg>
+                    </div>
+                    <address class="contact__address-text contact-office">Москва, 1-й Самотёчный пер., д.15 стр.1, помещ.1п </address>
+                  </div>
+                  <div class="contact__working-hourse">
+                    <div class="contact__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                      </svg>
+                    </div>
+                    <div class="contact__working-hourse-text contact-office">Пн-Пт 9:00-18:00, Сб-Вс - выходные дни</div>
+                  </div>
+                </div>
+              </div>
+              <iframe class="contact__maps" src="https://yandex.ru/map-widget/v1/?um=constructor%3A280507013ef95c68ef8bf050dfae9936ec68a0841f095ae03b882446635781d0&amp;source=constructor" width="970" height="450" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <a class="header__logo logo" href="#" title="Логотип ТСМЕД">
+          <img width="150" height="44" src="assets/images/tsmedlogo_wh.svg" alt="Логотип ТСМЕД">
+        </a>
+        <p class="footer__copyright">© 2017-2024 ООО “ТС МЕД”. Все права защищены</p>
+      </div>
+    </footer>
+    <div class="modal">
+      <div class="modal__overlay">
+        <div class="modal__inner">
+          <div class="modal__window">
+            <div class="modal__title">Оставьте заявку</div>
+            <button class="modal__close">
+              <svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd"><rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect><rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect></g></svg>
+            </button>
+            <form class="contact__сonsultation-form form" action="">
+              <input class="contact__сonsultation-form-input form-input" type="text" placeholder="Ваше имя">
+              <input class="contact__сonsultation-form-input form-input" type="email" placeholder="Ваше email">
+              <textarea class="contact__сonsultation-form-textarea form-textarea" name="Сообщение" id="" placeholder="Сообщение"></textarea>
+              <div class="contact__consultation-form-confirmation form-confirmation">
+                <input class="contact__consultation-form-confirmation-checkbox form-checkbox" type="checkbox">
+                <p class="contact__consultation-form-confirmation-description text-description-small">
+                  Я даю согласие на <a href="#">обработку персональных данных</a>
+                </p>
+              </div>
+              <button class="contact__consultation-form-button button-primary" type="submit">Оставить заявку</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <script src="assets/libs/splide.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

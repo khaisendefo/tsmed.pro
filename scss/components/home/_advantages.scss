@@ -1,0 +1,50 @@
+.advantages {
+  padding: 70px 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: var(--dark-blue-color);
+
+  &__title {
+    margin-bottom: 30px;
+    color: var(--white-color);
+  }
+
+  &__description {
+    margin-bottom: 40px;
+    max-width: 1300px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  &__card {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #0033ff1b;
+  
+    &-icon {
+      margin-bottom: 30px;
+
+      & svg {
+        width: 60px;
+        height: 60px;
+
+        & path {
+          fill: var(--white-color);
+        }
+
+        & circle {
+          fill: var(--white-color);
+        }
+      }
+    }
+
+    &-title {
+      font-size: 1.2em;
+      color: var(--white-color);
+    }
+  }
+}

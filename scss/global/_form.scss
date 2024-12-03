@@ -1,0 +1,46 @@
+.form {
+  @include flex-column;
+  
+  &-textarea,
+  &-input {
+    border: 1px solid var(--dark-color);
+    background-color: var(--white-color);
+    padding: 15px 18px;
+    border-radius: 15px;
+    transition: all var(--transition);
+    font-weight: 500;
+    color: var(--dark-color);
+    font-size: 1em;
+
+    &::placeholder {
+      font-size: 1em;
+      color: var(--dark-color);
+      font-weight: 400;
+    }
+
+    &:focus {
+      border: 1px solid var(--accent-blue-color);
+    }
+  }
+
+  &-textarea {
+    resize: none;
+  }
+  
+  &-confirmation {
+    display: flex;
+    align-items: start; 
+    gap: 10px;
+
+    & a {
+      color: var(--accent-blue-color);
+    }
+  }
+
+  &-checkbox {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    transition: all var(--transition);
+  }
+}
