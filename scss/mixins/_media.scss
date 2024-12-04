@@ -19,6 +19,11 @@
 
 // Breakpoints for every 100 px
 
+@mixin breakpoint-1500 {
+  @media (max-width: 1500px) {
+    @content;
+  }
+}
 @mixin breakpoint-1400 {
   @media (max-width: 1400px) {
     @content;

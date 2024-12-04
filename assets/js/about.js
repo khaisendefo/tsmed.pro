@@ -1,12 +1,3 @@
-AOS.init(
-  {
-    duration: 600, 
-    offset: 100,
-    easing: 'ease-in-out', 
-    once: true,
-  }
-);
-
 // burger
 document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.querySelector('.header__burger');
@@ -54,76 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// equipment tab
-document.querySelectorAll('.equipment__card').forEach((card) => {
-  const buttons = card.querySelectorAll('.equipment__card-tab-nav-button');
-  const contents = card.querySelectorAll('[data-content]');
-
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      buttons.forEach((btn) => btn.classList.remove('active'));
-      contents.forEach((content) => content.classList.remove('active'));
-
-      button.classList.add('active');
-      const tab = button.dataset.tab;
-      card.querySelector(`[data-content="${tab}"]`).classList.add('active');
-    });
-  });
-});
-
-// consumables slider
-const splide = new Splide('.consumables__slider', {
-  perPage: 3, 
-  perMove: 1,
-  pagination: false,
-  arrows: false,
-  gap: '24px',
-  // autoplay  : true,   
-  // interval  : 2000,   
-  // pauseOnHover: true, 
-
-  breakpoints: {
-    1200: {
-      gap: '15px',
-    },
-    1100: {
-      perPage: 2, 
-    },
-    700: {
-      perPage: 1,
-    }
-  }
-});
-
-splide.mount();
-
-const prevButton = document.querySelector('.consumables__slider-nav-arrow--prev');
-const nextButton = document.querySelector('.consumables__slider-nav-arrow--next');
-
-prevButton.addEventListener('click', () => splide.go('<'));
-nextButton.addEventListener('click', () => splide.go('>'));
-
-updateArrowState();
-
-splide.on('move', updateArrowState);
-splide.on('updated', updateArrowState); 
-
-function updateArrowState() {
-  if (splide.index === 0) {
-    prevButton.classList.add('consumables__slider-nav-arrow--is-disabled');
-  } else {
-    prevButton.classList.remove('consumables__slider-nav-arrow--is-disabled');
-  }
-
-  const lastSlideIndex = splide.Components.Controller.getEnd();
-
-  if (splide.index === lastSlideIndex) {
-    nextButton.classList.add('reviews__slider-nav-arrow--is-disabled');
-  } else {
-    nextButton.classList.remove('reviews__slider-nav-arrow--is-disabled');
-  }
-}
-
 // modal
 const toggleModal = () => {
   document.addEventListener('DOMContentLoaded', function () {
@@ -165,7 +86,6 @@ const toggleModal = () => {
 };
 
 toggleModal(); 
-
 
 // Yandex maps API 
 ymaps.ready(init);

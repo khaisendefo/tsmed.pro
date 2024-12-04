@@ -3,6 +3,20 @@
 @import 'burger';
 @import 'form';
 
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: var(--light-white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: var(--accent-blue-color);
+}
+
+::selection {
+  color: var(--white-color);
+  background-color: var(--accent-blue-color);
+}
 
 html, body {
   scroll-behavior: smooth;
@@ -22,11 +36,56 @@ html, body {
 
 
 .container {
-  max-width: 1530px;
+  max-width: 1430px;
   margin: 0 auto;
   padding: 0 15px;
   height: 100%;
+
+  @include breakpoint-1500 {
+    max-width: 1330px;
+  }
+
+  @include breakpoint-1400 {
+    max-width: 1230px;
+  }
+
+  @include breakpoint-1300 {
+    max-width: 1130px;
+  }
+
+  @include breakpoint-1200 {
+    max-width: 1030px;
+  }
+
+  @include breakpoint-1100 {
+    max-width: 930px;
+  }
+
+  @include breakpoint-1000 {
+    max-width: 830px;
+  }
+
+  @include breakpoint-900 {
+    max-width: 730px;
+  }
+
+  @include breakpoint-800 {
+    max-width: 630px;
+  }
+
+  @include breakpoint-700 {
+    max-width: 530px;
+  }
+
+  @include breakpoint-600 {
+    max-width: 430px;
+  }
 }
+
+.body-no-scroll {
+  overflow: hidden;
+}
+
 
 .logo {
   & img {

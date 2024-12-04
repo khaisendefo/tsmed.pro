@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ТС Мед - Надёжный поставщик медоборудования и расходных материалов</title>
+  <link rel="stylesheet" href="assets/libs/aos.css">
   <link rel="stylesheet" href="assets/libs/splide.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" type="image/svg+xml" sizes="16x16" href="assets/favicon/favicon-16x16.svg">
+  <link rel="icon" type="image/svg+xml" sizes="32x32" href="assets/favicon/favicon-32x32.svg">
+  <link rel="icon" type="image/svg+xml" sizes="48x48" href="assets/favicon/favicon-48x48.svg">
+  <link rel="icon" type="image/svg+xml" sizes="64x64" href="assets/favicon/icon-64x64.svg">
+  <link rel="shortcut icon" href="assets/favicon/icon-64x64.svg">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=312a1118-cfcb-4a31-b89c-186e3210c424&lang=ru_RU"></script>
+	</script>
 </head>
 <body class="body">
   <div class="wrapper">
@@ -26,7 +34,7 @@
       </div>
        <div class="header__fixed">
         <div class="header__container container">
-          <a class="header__logo logo" href="#" title="Логотип ТСМЕД">
+          <a class="header__logo logo" href="index.html" title="Логотип ТСМЕД">
             <img width="150" height="44" src="assets/images/tsmedlogo_wh.svg" alt="Логотип ТСМЕД">
           </a>
           <button class="header__burger" aria-label="Бургер меню">
@@ -39,19 +47,19 @@
             <nav class="header__nav">
               <ul class="header__nav-list">
                 <li class="header__nav-item">
-                  <a class="header__nav-link text-link" title="Главная" href="#">Главная</a>
+                  <a class="header__nav-link text-link" title="Главная" href="#hero">Главная</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link text-link" title="Оборудование" href="#">Оборудование</a>
+                  <a class="header__nav-link text-link" title="Оборудование" href="#equipment">Оборудование</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link text-link" title="Расходники" href="#">Расходники</a>
+                  <a class="header__nav-link text-link" title="Расходники" href="#consumables">Расходники</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link text-link" title="Почему мы?" href="#">Преимущества</a>
+                  <a class="header__nav-link text-link" title="Почему мы?" href="#advantages">Преимущества</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link text-link" title="Контакты" href="#">Контакты</a>
+                  <a class="header__nav-link text-link" title="Контакты" href="#contact">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -102,7 +110,7 @@
             <div class="hero__content">
               <div class="hero__information">
                 <h1 class="hero__information-title heading-title">НАДЁЖНЫЙ ПОСТАВЩИК <br> МЕДОБОРУДОВАНИЯ <br> И РАСХОДНЫХ МАТЕРИАЛОВ</h1>
-                <p class="hero__information-description text-description">На сегодняшний день Tsmed является международной компанией с офисами во многих странах мира. Вся продукция компании производится в Европе под самым жестким контролем за соблюдением мировых стандартов производства, и является эталоном качества и надежности.</p>
+                <p class="hero__information-description text-description">ООО "ТС Мед" ваш надёжный партнёр, мы более 7 лет на рынке мед. оборудования: медицинских и диодных лазеров, оптического волокна, принадлежностей для лазерной хирургии и т.п. для медицинских учреждений, частных клиник и частных медицинских кабинетов. <a href="about.html">Далее...</a></p>
                 <button class="hero__information-button button-primary modal-open">
                   Оставить заявку
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,10 +123,11 @@
                   <li class="hero__information-list-item text-item">Качественная продукция</li>
                   <li class="hero__information-list-item text-item">Более 7 лет работы</li>
                   <li class="hero__information-list-item text-item">Сертифицированная продукция</li>
+                  <li class="hero__information-list-item text-item">Расходные материалы</li>
                 </ul>
               </div>
-              <div class="hero__image">
-                <img src="assets/images/Wisdom-Medical-Leonardo-200.png" alt="">
+              <div class="hero__img">
+                <div class="hero__img-wrapper"></div>
               </div>
             </div>
           </div>
@@ -398,29 +407,49 @@
         <div class="consumables__inner">
           <div class="consumables__container container">
             <div class="consumables__content">
-              <h2 class="consumables__title heading-section-title">Расходники Медицинского оборудования</h2>
+              <h2 class="consumables__title heading-section-title">Расходники</h2>
               <div class="consumables__slider splide">
+                <nav class="consumables__slider-nav">
+                  <button class="consumables__slider-nav-arrow consumables__slider-nav-arrow--prev">
+                    <div class="consumables__slider-nav-wrap">
+                      <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.25 23.5L2.75 13L13.25 2.5" stroke="#91D041" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>  
+                  </button>
+                  <button class="consumables__slider-nav-arrow consumables__slider-nav-arrow--next">
+                    <div class="consumables__slider-nav-wrap">
+                      <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.75 2.5L13.25 13L2.75 23.5" stroke="#91D041" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg> 
+                    </div>
+                  </button>
+                </nav>
                 <div class="consumables__slider-track splide__track">
                   <div class="consumables__slider-list splide__list">
                     <article class="consumables__slider-card splide__slide">
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/1.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Swift</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501100140</h4>
-                        <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником ELVeS Radial swift идеально подходит для малых подкожных вен, за счет тонкого волокна. Идеально подходит как для опытных врачей, так и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
-                        <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Swift</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501100140</h4>
+                          <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником ELVeS Radial swift идеально подходит для малых подкожных вен, за счет тонкого волокна. Идеально подходит как для опытных врачей, так и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                        </div>
+                        <button class="equipment__slider-card-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
                     <article class="consumables__slider-card splide__slide">
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/2.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Swift</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501100250</h4>
-                        <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником FiLaC Fistula Probe предназначен чтобы аккуратно удалить свищевой ход, не повреждая сфинктер. Кроме того, FiLaC процедура предлагает минимально инвазивный подход, который может быть выполняется всего за несколько минут, так как действие лазера заменяет иссечение.</p>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Swift</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501100250</h4>
+                          <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником FiLaC Fistula Probe предназначен чтобы аккуратно удалить свищевой ход, не повреждая сфинктер. Кроме того, FiLaC процедура предлагает минимально инвазивный подход, который может быть выполняется всего за несколько минут, так как действие лазера заменяет иссечение.</p>
+                        </div>
                         <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
@@ -428,10 +457,12 @@
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/3.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">HeLP LHP-Fiber</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501100200</h4>
-                        <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником LHP-Fiber используется для лечения запущенного геморроя. Энергия лазера вводится центрально в геморроидальный узел. По этой методике геморрой можно лечить в зависимости от его размера, не вызывая любое повреждение анодермы или слизистой оболочки.</p>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">HeLP LHP-Fiber</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501100200</h4>
+                          <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником LHP-Fiber используется для лечения запущенного геморроя. Энергия лазера вводится центрально в геморроидальный узел. По этой методике геморрой можно лечить в зависимости от его размера, не вызывая любое повреждение анодермы или слизистой оболочки.</p>
+                        </div>
                         <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
@@ -439,10 +470,12 @@
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/4.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Slim Fiber</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501100150</h4>
-                        <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником ELVeS Radial Slim идельно подходит для малых подкожных вен, за счет тонкого волокна.Идеально подходит как для опытных врачей, так и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Slim Fiber</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501100150</h4>
+                          <p class="consumables__slider-card-description text-description-small">Гибкий световод с коннектором и наконечником ELVeS Radial Slim идельно подходит для малых подкожных вен, за счет тонкого волокна.Идеально подходит как для опытных врачей, так и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                        </div>
                         <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
@@ -450,10 +483,12 @@
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/5.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial 2ring Fiber</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501100170</h4>
-                        <p class="consumables__slider-card-description text-description-small">Двухфазное излучение ELVeS® Radial® 2ring — лучший выбор для отличного результата не только для опытных врачей, но и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">ELVeS Radial 2ring Fiber</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501100170</h4>
+                          <p class="consumables__slider-card-description text-description-small">Двухфазное излучение ELVeS® Radial® 2ring — лучший выбор для отличного результата не только для опытных врачей, но и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                        </div>
                         <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
@@ -461,10 +496,12 @@
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/6.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Fiber</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501100100</h4>
-                        <p class="consumables__slider-card-description text-description-small">Гибкий однокольцевой световод с коннектором и наконечником ELVeS Radial Fiber идельно подходит для решения различный задач, лучший выбор для отличного результата не только для опытных врачей, но и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">ELVeS Radial Fiber</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501100100</h4>
+                          <p class="consumables__slider-card-description text-description-small">Гибкий однокольцевой световод с коннектором и наконечником ELVeS Radial Fiber идельно подходит для решения различный задач, лучший выбор для отличного результата не только для опытных врачей, но и для новых пользователей, которым требуется эффективная, безопасная и простая в использовании технология.</p>
+                        </div>
                         <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
@@ -472,10 +509,12 @@
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/7.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">Twister Fiber</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501200200</h4>
-                        <p class="consumables__slider-card-description text-description-small">Наши контактные волокна Twister Fiber разработаны для достижения непревзойденной скорости абляции и отличной надежности. Работа в контактном режиме предлагает прямую и высокую подачу энергии точно на область, где вы хотите провести аблацию или вапоризацию.</p>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">Twister Fiber</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501200200</h4>
+                          <p class="consumables__slider-card-description text-description-small">Наши контактные волокна Twister Fiber разработаны для достижения непревзойденной скорости абляции и отличной надежности. Работа в контактном режиме предлагает прямую и высокую подачу энергии точно на область, где вы хотите провести аблацию или вапоризацию.</p>
+                        </div>
                         <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
@@ -483,10 +522,12 @@
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/8.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">Bare Fiber 1000 Flat tip</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501300400</h4>
-                        <p class="consumables__slider-card-description text-description-small">текст...</p>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">Bare Fiber 1000 Flat tip</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501300400</h4>
+                          <p class="consumables__slider-card-description text-description-small">текст...</p>
+                        </div>
                         <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
@@ -494,10 +535,12 @@
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/9.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">Bare Fiber 600 Flat tip</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501200740</h4>
-                        <p class="consumables__slider-card-description text-description-small">текст...</p>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">Bare Fiber 600 Flat tip</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501200740</h4>
+                          <p class="consumables__slider-card-description text-description-small">текст...</p>
+                        </div>
                         <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
@@ -505,10 +548,12 @@
                       <div class="consumables__slider-card-image">
                         <img width="150" height="250" src="assets/images/consumables/10.png" alt="">
                       </div>
-                      <div class="consumables__slider-card-information">
-                        <h3 class="consumables__slider-card-name heading-name">Bare Fiber 400 Flat tip</h3>
-                        <h4 class="consumables__slider-card-article">Арт.501200744</h4>
-                        <p class="consumables__slider-card-description text-description-small">текст...</p>
+                      <div class="consumables__slider-card-body">
+                        <div class="consumables__slider-card-information">
+                          <h3 class="consumables__slider-card-name heading-name">Bare Fiber 400 Flat tip</h3>
+                          <h4 class="consumables__slider-card-article">Арт.501200744</h4>
+                          <p class="consumables__slider-card-description text-description-small">текст...</p>
+                        </div>
                         <button class="equipment__card-general-button button-primary modal-open">Оставить заявку</button>
                       </div>
                     </article>
@@ -519,7 +564,7 @@
           </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="advantages__inner">
           <div class="advantages__container container">
             <h2 class="advantages__title heading-section-title">Почему, Вам будет выгодно сотрудничать с нами?</h2>
@@ -564,50 +609,53 @@
           </div>
         </div>
       </section>
-      <section class="gallery">
+      <section class="gallery" id="gallery">
         <div class="gallery__container container">
           <div class="gallery__grid">
-            <div class="gallery__card">
-              <img src="assets/images/gallery/1.JPG" alt="">
-            </div>
-            <div class="gallery__card">
+            <a href="https://conf.siterscs.com/" target="_blank" class="gallery__card">
+              <img src="assets/images/gallery/1.jpg" alt="">
+            </a>
+            <a href="https://surgeonconf.ru/conference" target="_blank" class="gallery__card">
               <img src="assets/images/gallery/2.jpg" alt="">
-            </div>
-            <div class="gallery__card">
+            </a>
+            <a href="https://phlebounion.ru/conferences" target="_blank" class="gallery__card">
               <img src="assets/images/gallery/3.jpg" alt="">
-            </div>
-            <div class="gallery__card">
+            </a>
+            <a href="https://phlebounion.ru/" target="_blank" class="gallery__card">
               <img src="assets/images/gallery/4.jpg" alt="">
-            </div>
-            <div class="gallery__card">
+            </a>
+            <a href="https://phlebounion.ru/conferences/2024-11-02-sankt-peterburg-vserossiyskaya-yezhegodnaya-flebologicheskaya-konferentsiya-temnyye-nochi" target="_blank" class="gallery__card">
               <img src="assets/images/gallery/5.jpg" alt="">
-            </div>
+            </a>
             <div class="gallery__card gallery__card-last">
               <a class="gallery__card-link" href="tezisyi-samara.pdf" target="_blank">Сертификат</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="contact__container container">
           <div class="contact__content">
             <div class="contact__сonsultation">
               <h2 class="contact__сonsultation-title heading-section-title">Напишите нам</h2>
-              <form class="contact__сonsultation-form form" action="">
-                <input class="contact__сonsultation-form-input form-input" type="text" placeholder="Ваше имя">
-                <input class="contact__сonsultation-form-input form-input" type="email" placeholder="Ваше email">
-                <textarea class="contact__сonsultation-form-textarea form-textarea" name="Сообщение" id="" placeholder="Сообщение"></textarea>
+              <form class="contact__сonsultation-form form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="794bb262-e610-4910-97ed-f37b8c3dc2ac">
+                <input type="hidden" name="subject" value="Заявка с сайта">
+                <input class="contact__сonsultation-form-input form-input" name="Имя" type="text" placeholder="Ваше имя" required>
+                <input class="contact__сonsultation-form-input form-input" name="Телефон" type="tel" placeholder="Ваш телефон" required>
+                <input class="contact__сonsultation-form-input form-input" name="E-mail" type="email" placeholder="Ваше e-mail" required>
+                <textarea class="contact__сonsultation-form-textarea form-textarea" name="Сообщение" name="Сообщение" id="" placeholder="Сообщение"></textarea>
                 <div class="contact__consultation-form-confirmation form-confirmation">
-                  <input class="contact__consultation-form-confirmation-checkbox form-checkbox" type="checkbox">
+                  <input class="contact__consultation-form-confirmation-checkbox form-checkbox" type="checkbox" required>
                   <p class="contact__consultation-form-confirmation-description text-description-small">
-                    Я даю согласие на <a href="#">обработку персональных данных</a>
+                    Я даю согласие на <button class="privacy-open" type="button">обработку персональных данных</button>
                   </p>
                 </div>
                 <button class="contact__consultation-form-button button-primary" type="submit">Оставить заявку</button>
               </form>
             </div>
             <div class="contact__wrapper">
-              <div class="contact__card" data-aos="fade-up">
+              <div class="contact__card">
                 <div class="contact__info">
                   <div class="contact__contact-tel contact-row">
                     <div class="contact__icon">
@@ -643,7 +691,7 @@
                   </div>
                 </div>
               </div>
-              <iframe class="contact__maps" src="https://yandex.ru/map-widget/v1/?um=constructor%3A280507013ef95c68ef8bf050dfae9936ec68a0841f095ae03b882446635781d0&amp;source=constructor" width="970" height="450" frameborder="0"></iframe>
+              <div class="contact__maps" id="map"></div>
             </div>
           </div>
         </div>
@@ -654,7 +702,7 @@
         <a class="header__logo logo" href="#" title="Логотип ТСМЕД">
           <img width="150" height="44" src="assets/images/tsmedlogo_wh.svg" alt="Логотип ТСМЕД">
         </a>
-        <p class="footer__copyright">© 2017-2024 ООО “ТС МЕД”. Все права защищены</p>
+        <p class="footer__copyright">© 2017-2025 ООО “ТС МЕД”. Все права защищены</p>
       </div>
     </footer>
     <div class="modal">
@@ -665,14 +713,17 @@
             <button class="modal__close">
               <svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd"><rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect><rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect></g></svg>
             </button>
-            <form class="contact__сonsultation-form form" action="">
-              <input class="contact__сonsultation-form-input form-input" type="text" placeholder="Ваше имя">
-              <input class="contact__сonsultation-form-input form-input" type="email" placeholder="Ваше email">
+            <form class="contact__сonsultation-form form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="794bb262-e610-4910-97ed-f37b8c3dc2ac">
+                <input type="hidden" name="subject" value="Заявка с сайта">
+              <input class="contact__сonsultation-form-input form-input" name="Имя" type="text" placeholder="Ваше имя" required>
+              <input class="contact__сonsultation-form-input form-input" name="Телефон" type="tel" placeholder="Ваш телефон" required>
+              <input class="contact__сonsultation-form-input form-input" name="E-mail" type="email" placeholder="Ваше e-mail" required>
               <textarea class="contact__сonsultation-form-textarea form-textarea" name="Сообщение" id="" placeholder="Сообщение"></textarea>
               <div class="contact__consultation-form-confirmation form-confirmation">
-                <input class="contact__consultation-form-confirmation-checkbox form-checkbox" type="checkbox">
+                <input class="contact__consultation-form-confirmation-checkbox form-checkbox" type="checkbox" required>
                 <p class="contact__consultation-form-confirmation-description text-description-small">
-                  Я даю согласие на <a href="#">обработку персональных данных</a>
+                  Я даю согласие на <button class="privacy-open" type="button">обработку персональных данных</button>
                 </p>
               </div>
               <button class="contact__consultation-form-button button-primary" type="submit">Оставить заявку</button>
@@ -681,7 +732,47 @@
         </div>
       </div>
     </div>
+    <div class="privacy">
+      <div class="privacy__overlay">
+        <div class="privacy__inner">
+          <div class="privacy__window">
+            <button class="privacy__close">
+              <svg role="presentation" class="t-popup__close-icon" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd"><rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect><rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect></g></svg>
+            </button>
+            <h2 class="privacy__title">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h2>
+            <div class="privacy__content">
+              <p class="privacy__description">
+                Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года Вы подтверждаете свое согласие на обработку компанией ООО «ТС Мед», ОГРН 1177746988275, ИНН 7707393415, КПП 770701001, 127473, Москва, 1-й Самотёчный пер., д.15 стр.1, помещ.1п (далее – Оператор) персональных данных: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, передачу исключительно в целях продажи программного обеспечения на Ваше имя, как это описано ниже, блокирование, обезличивание, уничтожение.
+              </p>
+              <p class="privacy__description">
+                Оператор гарантирует конфиденциальность получаемой информации. Обработка персональных данных осуществляется в целях эффективного исполнения заказов, договоров и иных обязательств, принятых Оператором в качестве обязательных к исполнению.
+              </p>
+              <p class="privacy__description">
+                В случае необходимости предоставления Ваших персональных данных правообладателю, дистрибьютору или реселлеру программного обеспечения в целях регистрации программного обеспечения на ваше имя, вы даёте согласие на передачу ваших персональных данных. Оператор гарантирует, что правообладатель, дистрибьютор или реселлер программного обеспечения осуществляет защиту персональных данных на условиях, аналогичных изложенным в Политике конфиденциальности персональных данных.
+              </p>
+              <p class="privacy__description">
+                Настоящее согласие распространяется на следующие Ваши персональные данные: фамилия, имя и отчество, адрес электронной почты, контактный телефон.
+              </p>
+              <p class="privacy__description">
+                Срок действия согласия является неограниченным. Вы можете в любой момент отозвать настоящее согласие, направив электронное письмо по адресу infotsmedmsk@gmail.com с пометкой «Отзыв согласия на обработку персональных данных».
+              </p>
+              <p class="privacy__description">
+                Обращаем ваше внимание, что отзыв согласия на обработку персональных данных влечёт за собой удаление Вашей учётной записи с Интернет-сайта (https://tsmed.pro, а также http://тсмед.рф/), а также уничтожение записей, содержащих ваши персональные данные, в системах обработки персональных данных Оператора, что может сделать невозможным пользование интернет-сервисами Оператора.
+              </p>
+              <p class="privacy__description">
+                Гарантирую, что представленная мной информация является полной, точной и достоверной, а также что при представлении информации не нарушаются действующее законодательство Российской Федерации, законные права и интересы третьих лиц. Вся представленная информация заполнена мною в отношении себя лично.
+              </p>
+              <p class="privacy__description">
+                Настоящее согласие действует в течение всего периода хранения персональных данных, если иное не предусмотрено законодательством Российской Федерации.
+              </p>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <script src="assets/libs/aos.js"></script>
+  <script src="assets/libs/inputmask.min.js"></script>
   <script src="assets/libs/splide.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>

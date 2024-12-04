@@ -1,0 +1,86 @@
+.privacy {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+
+  @include breakpoint-1000 {
+    background-color: var(--white-color);
+  }
+
+  &.active {
+    display: block;
+  }
+
+  &, &__overlay {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.759);
+    @include breakpoint-1000 {
+      background-color: transparent;
+    }
+  }
+
+  &__inner {
+    @include flex-all-center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    padding: 30px;
+    z-index: 200;
+
+    @include breakpoint-1000 {
+      padding: 5px;
+      background-color: var(--dark-color);
+    }
+
+    & svg {
+      @include breakpoint-1000 {
+        width: 18px;
+        height: 18px;
+        transform: translateY(2px);
+      }
+    }
+  }
+
+  &__window {
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    background-color: var(--white-color);
+    animation: modal .5s ease-in-out;
+
+    @include breakpoint-1000 {
+      height: 100vh;
+      overflow-y: auto; 
+    }
+  }
+
+  &__title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__description {
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+}

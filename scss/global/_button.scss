@@ -15,5 +15,10 @@
     &:active {
       opacity: 0.8;
     }
+
+    @include breakpoint-900 {
+      font-size: 0.9em;
+    }
+
   }
 }

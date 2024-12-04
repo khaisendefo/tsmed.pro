@@ -19,15 +19,27 @@
   }
 
   &-description {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.3;
     font-weight: 500;
     color: var(--light-white-color);
+
+    @include breakpoint-1100 {
+      font-size: 1em;
+    }
+
+    @include breakpoint-700 {
+      font-size: 0.9em;
+    }
 
     &-small {
       font-size: 1em;
       line-height: 1.3;
       font-weight: 400;
+
+      @include breakpoint-900 {
+        font-size: 0.9em;
+      }
     }
   }
 
@@ -35,6 +47,10 @@
     color: var(--white-color);
     font-size: 1em;
     font-weight: 500;
+
+    @include breakpoint-900 {
+      font-size: 0.9em;
+    }
   }
 
   &-label {
@@ -45,22 +61,60 @@
 
 .heading {
   &-title {
-    font-size: 3.5em;
+    font-size: 3em;
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1.3;
     color: var(--white-color);
+
+    @include breakpoint-1300 {
+      font-size: 2.6em;
+    }
+
+    @include breakpoint-900 {
+      font-size: 2.3em;
+    }
+
+    @include breakpoint-700 {
+      font-size: 2em;
+    }
+
+    @include breakpoint-500 {
+      font-size: 1.7em;
+    }
   }
 
   &-section-title {
     font-size: 2.8em;
     font-weight: 500;
     text-transform: uppercase;
+    line-height: 1.3;
+
+    @include breakpoint-1300 {
+      font-size: 2.3em;
+    }
+
+    @include breakpoint-900 {
+      font-size: 2em;
+    }
+
+    @include breakpoint-700 {
+      font-size: 1.7em;
+    }
+
+    @include breakpoint-500 {
+      font-size: 1.5em;
+      text-align: center;
+    }
   }
 
   &-name {
     font-size: 1.5em;
     font-weight: 500;
     color: var(--accent-blue-color);
+
+    @include breakpoint-900 {
+      font-size: 1.3em;
+    }
   }
 }

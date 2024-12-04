@@ -1,0 +1,26 @@
+.about {
+  padding: 70px 0;
+
+  @include breakpoint-900 {
+    padding: 45px 0;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    color: var(--white-color);
+
+    @include breakpoint-900 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    @include flex-column;
+    max-width: 1300px;
+    gap: 30px;
+
+    @include breakpoint-900 {
+      gap: 20px;
+    }
+  }
+}
