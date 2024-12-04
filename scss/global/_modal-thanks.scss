@@ -1,0 +1,53 @@
+.modal-thanks {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  &, &__overlay {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.759);
+  }
+
+  &__inner {
+    @include flex-all-center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__window {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+  }
+
+  &__close {
+    padding: 15px 0;
+    width: 250px;
+  }
+}

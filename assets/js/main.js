@@ -78,9 +78,9 @@ const splide = new Splide('.consumables__slider', {
   pagination: false,
   arrows: false,
   gap: '24px',
-  // autoplay  : true,   
-  // interval  : 2000,   
-  // pauseOnHover: true, 
+  autoplay  : true,   
+  interval  : 2000,   
+  pauseOnHover: true, 
 
   breakpoints: {
     1200: {
@@ -124,49 +124,6 @@ function updateArrowState() {
   }
 }
 
-// modal
-const toggleModal = () => {
-  document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.querySelector('.modal'); 
-    const body = document.body; 
-    const modalOpenButtons = document.querySelectorAll('.modal-open'); 
-    const modalCloseButton = document.querySelector('.modal__close'); 
-    const modalOverlay = modal.querySelector('.modal__overlay'); 
-
-    function openModal() {
-      modal.classList.add('active');
-      body.classList.add('body-no-scroll'); 
-    }
-
-    function closeModal() {
-      modal.classList.remove('active');
-      body.classList.remove('body-no-scroll'); 
-    }
-
-    modalOpenButtons.forEach(button => {
-      button.addEventListener('click', openModal);
-    });
-
-    modalCloseButton.addEventListener('click', closeModal);
-
-    modalOverlay.addEventListener('click', (event) => {
-      const modalWindow = modal.querySelector('.modal__window');
-      if (!modalWindow.contains(event.target)) {
-        closeModal();
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        closeModal();
-      }
-    });
-  });
-};
-
-toggleModal(); 
-
-
 // Yandex maps API 
 ymaps.ready(init);
 
@@ -185,7 +142,7 @@ function init() {
         },
         {
             iconLayout: 'default#image', 
-            iconImageHref: '/assets/icon/location.svg', 
+            iconImageHref: './assets/icon/location.svg', 
             iconImageSize: [50, 50], 
             iconImageOffset: [-25, -50] 
         }
@@ -199,33 +156,90 @@ let inputs = document.querySelectorAll('input[type="tel"]');
 let im = new Inputmask('+7(999) 999-99-99');
 im.mask(inputs);
 
-// form submit
-var forms = document.querySelectorAll('.form');
-forms.forEach(function(form) {
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    var formData = new FormData(this);
-    fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Ошибка отправки данных: " + response.status);
+const toggleModal = () => {
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.querySelector('.modal'); 
+    const body = document.body; 
+    const modalOpenButtons = document.querySelectorAll('.modal-open'); 
+    const modalCloseButton = document.querySelector('.modal__close'); 
+    const modalOverlay = modal.querySelector('.modal__overlay'); 
+
+    const modalThanks = document.querySelector('.modal-thanks');
+    const modalThanksCloseButton = modalThanks.querySelector('.modal-thanks__close');
+
+    function openModal() {
+      modal.classList.add('active');
+      body.classList.add('body-no-scroll'); 
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      body.classList.remove('body-no-scroll'); 
+    }
+
+    function openModalThanks() {
+      modalThanks.classList.add('active');
+      body.classList.add('body-no-scroll');
+    }
+
+    function closeModalThanks() {
+      modalThanks.classList.remove('active');
+      body.classList.remove('body-no-scroll');
+    }
+
+    modalOpenButtons.forEach(button => {
+      button.addEventListener('click', openModal);
+    });
+
+    modalCloseButton.addEventListener('click', closeModal);
+
+    modalOverlay.addEventListener('click', (event) => {
+      const modalWindow = modal.querySelector('.modal__window');
+      if (!modalWindow.contains(event.target)) {
+        closeModal();
       }
-      return response.json();
-    })
-    .then(data => {
-      alert("Данные успешно отправлены!"); 
-      console.log(data);
-      this.reset();
-    })
-    .catch(error => {
-      alert("Ошибка отправки данных: " + error.message);
-      console.error(error);
+    });
+
+    modalThanksCloseButton.addEventListener('click', closeModalThanks);
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+
+    var forms = document.querySelectorAll('.form');
+    forms.forEach(function(form) {
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var formData = new FormData(this);
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Ошибка отправки данных: " + response.status);
+          }
+          return response.json();
+        })
+        .then(data => {
+          closeModal();
+
+          openModalThanks();
+
+          console.log(data);
+          this.reset();
+        })
+        .catch(error => {
+          console.error("Ошибка отправки данных: " + error.message);
+        });
+      });
     });
   });
-});
+};
+
+toggleModal();
 
 // privacy
 const togglePrivacyModal = () => {

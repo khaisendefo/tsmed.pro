@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://tsmed.pro/sitemap.xml
+Sitemap: https://xn--d1abute.xn--p1ai/sitemap.xml
